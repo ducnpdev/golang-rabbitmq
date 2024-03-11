@@ -37,6 +37,20 @@ go run receive/hello/receive.go
     go run receive/workQueue/worker.go
     ```
 
+### pub/sub
+1. Message default:
+- start send message:
+    ```go
+    go run send/pubsub/emit_log.go
+    ```
+    or
+    ```go
+    go run send/pubsub/emit_log.go 123
+    ```
+- receive message: 
+    ```go
+    go run receive/pubsub/receive_logs.go
+    ```
 
 ## contacts:
 - facebook: https://www.facebook.com/phucducdev/
