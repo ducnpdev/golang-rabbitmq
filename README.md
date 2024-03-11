@@ -52,6 +52,26 @@ go run receive/hello/receive.go
     go run receive/pubsub/receive_logs.go
     ```
 
+### routing
+- start send message:
+    ```go
+    go run send/pubsub/emit_log.go
+    ```
+    default send message routing key `info`
+    or 
+    ```go
+    go run send/pubsub/emit_log.go error
+    ```
+    send message routing key `error`
+- receive message: 
+    ```go
+    go run receive/routing/receive_logs_direct.go info // routing info
+    go run receive/routing/receive_logs_direct.go error // routing error 
+    go run receive/routing/receive_logs_direct.go debug // routing debug 
+    go run receive/routing/receive_logs_direct.go 123123 // routing 123123
+    ```
+
+
 ## contacts:
 - facebook: https://www.facebook.com/phucducdev/
 - zalo: +84335280715
