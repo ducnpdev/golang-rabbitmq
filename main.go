@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"time"
+)
+
 // import (
 // 	"context"
 // 	"fmt"
@@ -19,7 +24,11 @@ package main
 // 	}
 // }
 
-// func main() {
+func main() {
+	t := time.Now().Unix()
+	fmt.Println(t)
+}
+
 // 	fmt.Println("main")
 // 	conn, err := amqp.Dial("amqp://guest:guest@localhost:5672/")
 // 	failOnError(err, "Failed to connect to RabbitMQ")

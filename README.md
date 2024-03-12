@@ -71,6 +71,19 @@ go run receive/hello/receive.go
     go run receive/routing/receive_logs_direct.go 123123 // routing 123123
     ```
 
+### topic
+
+- start send message:
+    ```go
+    go run send/topic/emit_log_topic.go "kern.critical" "A critical kernel error"
+    ```
+- receive message: 
+    ```go
+    go run receive/topic/receive_logs_topic.go "#" // To receive all the logs:
+    go run receive/topic/receive_logs_topic.go "kern.*" // To receive all logs from the facility "kern":
+    go run receive/topic/receive_logs_topic.go "*.critical" // Or if you want to hear only about "critical" logs:
+    go run receive/topic/receive_logs_topic.go "kern.*" "*.critical" // You can create multiple bindings:
+    ```
 
 ## contacts:
 - facebook: https://www.facebook.com/phucducdev/
