@@ -85,6 +85,15 @@ go run receive/hello/receive.go
     go run receive/topic/receive_logs_topic.go "kern.*" "*.critical" // You can create multiple bindings:
     ```
 
+### rpc 
+- start send message:
+    ```go
+    go run send/rpc/rpc_server.go
+    ```
+- receive message:
+    ```go
+    go run receive/rpc/rpc_client.go 30
+    ```
 ## contacts:
 - facebook: https://www.facebook.com/phucducdev/
 - zalo: +84335280715
